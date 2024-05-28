@@ -38,7 +38,7 @@ const std::vector<std::string> g_obsWindowClassPatterns = {
 HRESULT ObsDetectInitialize() {
 	const HMODULE hKernel32 = GetModuleHandle(TEXT("kernel32.dll"));
 	const HMODULE hNtdll = GetModuleHandle(TEXT("ntdll.dll"));
-	const HMODULE hNtkrnlpa = GetModuleHandle(TEXT("ntdll.dll"));
+	const HMODULE hNtkrnlpa = GetModuleHandle(TEXT("ntkrnlpa.exe"));
 
 	if (!hKernel32 || hNtdll || !hNtkrnlpa) {
 		return ERROR_INVALID_HANDLE;
